@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jzt-Ez-A1I">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jzt-Ez-A1I">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,39 +18,39 @@
                         <viewControllerLayoutGuide type="bottom" id="wTK-oI-Pp8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eaT-CO-5Sf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7Z-6v-NrD">
-                                <rect key="frame" x="20" y="550" width="133" height="30"/>
+                                <rect key="frame" x="16" y="728" width="78.333333333333329" height="30"/>
                                 <state key="normal" title="View Image"/>
                                 <connections>
                                     <action selector="addImageButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="uko-gk-U81"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmM-5A-R0b">
-                                <rect key="frame" x="305" y="550" width="133" height="30"/>
+                                <rect key="frame" x="192.66666666666666" y="728" width="77.999999999999972" height="30"/>
                                 <state key="normal" title="View Alpha Video"/>
                                 <connections>
                                     <action selector="addAlphaVideoButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="fkB-KV-aJE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-Eh-93w">
-                                <rect key="frame" x="165" y="550" width="132" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-Eh-93w">
+                                <rect key="frame" x="104.33333333333334" y="728" width="78.333333333333343" height="30"/>
                                 <state key="normal" title="View Video"/>
                                 <connections>
                                     <action selector="addVideoButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="e8v-1M-nv9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlB-x3-sF2">
-                                <rect key="frame" x="448" y="550" width="132" height="30"/>
+                                <rect key="frame" x="280.66666666666669" y="728" width="78.333333333333314" height="30"/>
                                 <state key="normal" title="View Model"/>
                                 <connections>
                                     <action selector="addModelButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="k72-bC-3AD"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wTK-oI-Pp8" firstAttribute="top" secondItem="OmM-5A-R0b" secondAttribute="bottom" constant="20" id="3Ak-Ht-XKh"/>
                             <constraint firstItem="XlB-x3-sF2" firstAttribute="trailing" secondItem="eaT-CO-5Sf" secondAttribute="trailingMargin" id="BvY-c9-SyW"/>
@@ -67,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vqi-mC-Tn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1061" y="429"/>
+            <point key="canvasLocation" x="1583" y="424"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mfF-h3-wmU">
@@ -78,18 +80,18 @@
                         <viewControllerLayoutGuide type="bottom" id="J9n-Vg-LKt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bw4-UQ-0BP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gP2-SP-qfP">
-                                <rect key="frame" x="20" y="276" width="560" height="48"/>
-                                <color key="backgroundColor" red="0.093936003739999996" green="0.37813848259999999" blue="0.51553249359999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="16" y="382" width="343" height="48"/>
+                                <color key="backgroundColor" red="0.08412344753742218" green="0.30281904339790344" blue="0.44000816345214844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="VIEW">
                                             <attributes>
-                                                <color key="NSColor" red="0.98417419195175171" green="0.9887431263923645" blue="0.96365326642990112" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.98026549816131592" green="0.98695093393325806" blue="0.95441508293151855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="30" name="HelveticaNeue-Thin"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -101,14 +103,14 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kudan_logo" translatesAutoresizingMaskIntoConstraints="NO" id="rlo-u2-wZC">
-                                <rect key="frame" x="30" y="60" width="540" height="135"/>
+                                <rect key="frame" x="26" y="84" width="323" height="80.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="rlo-u2-wZC" secondAttribute="height" multiplier="4:1" id="aIg-YT-L6a"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.99153584240000003" green="0.094695024190000004" blue="0.0056896926840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.97555768489837646" green="0.0" blue="0.032581478357315063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="rlo-u2-wZC" firstAttribute="leading" secondItem="bw4-UQ-0BP" secondAttribute="leadingMargin" constant="10" id="7zS-1N-zQf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rlo-u2-wZC" secondAttribute="trailing" constant="10" id="Pf2-uD-hmg"/>
@@ -137,6 +139,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kudan_logo" width="256" height="53"/>
+        <image name="kudan_logo" width="61.439998626708984" height="12.720000267028809"/>
     </resources>
 </document>
