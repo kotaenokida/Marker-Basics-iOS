@@ -1,5 +1,7 @@
 # Kudan Tutorials - Marker Basics
 
+[Japanese README is here](./README.md)
+
 This tutorial will take you through the basics of getting started with KudanAR, leading on from our previous tutorial which described how to integrate our framework into an iOS project. If you have not already set up a project with an ARCameraViewController, I suggest you check it out before going any further.
 
 This tutorial utilises bundled assets so ensure that you have imported the correct assets into your project.
