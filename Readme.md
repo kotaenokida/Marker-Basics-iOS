@@ -1,5 +1,7 @@
 # Kudan Tutorials - Marker Basics
 
+[English README is here](./README_en.md)
+
 このチュートリアルでは、KudanAR を使い始めるための基本を説明します。以前のチュートリアルでは、フレームワークを iOS プロジェクトに統合する方法について説明しました。プロジェクトに ARCameraViewController を設定していない場合は、先に進む前に以前のチュートリアルをチェックすることをお勧めします。
 
 このチュートリアルでは、バンドルされたアセットを利用するため、正しいアセットがプロジェクトにインポートされていることを確認してください。
@@ -134,10 +136,28 @@ float scale = (float)self.imageTrackable.width / alphaVideoNode.videoTexture.wid
 
 ### コンテンツの可視性
 
-Each node has a boolean value which can be set to determine whether or not the node is displayed. This is useful when you have multiple nodes attached to a marker and you do not wish to display them all at once. This can be set using:
 各ノードにはブール値があり、ノードを表示するかどうかを決定するために設定できます。この設定はマーカーに複数のノードが接続されていて、それらを一度にすべて表示したくない場合に便利です。次を使用して設定できます。
 
 ```objectivec
 // Hide image node
 [imageNode setVisible:NO];
 ```
+
+
+## 利用方法
+
+- [エクセルソフトの Kudan ダウンロードページ](https://www.xlsoft.com/jp/products/kudan/download.html?utm_source=external&utm_medium=github_xlsoft&utm_campaign=Marker-Basics-iOS) から最新の Kudan AR iOS SDK のダウンロードをお申し込みください。
+- `KudanAR.framework` をプロジェクトフォルダーにコピーまたは移動します。
+- ビルドして実行します。
+
+## エクセルソフトについて
+
+エクセルソフトは Kudan AR/CV SDK の販売代理店です。
+
+- AR で出来ることを知りたい
+- AR の活用方法を相談したい
+- デモ／訪問を希望する
+- ライブラリの使い方を知りたい
+- 価格を知りたい
+
+などのご相談はお気軽に [お問合せフォーム](https://www.xlsoft.com/jp/services/xlsoft_form.html?option2=Kudan&utm_source=external&utm_medium=github_xlsoft&utm_campaign=Marker-Basics-iOS) よりお寄せ下さい。
