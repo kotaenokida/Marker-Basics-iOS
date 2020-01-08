@@ -1,27 +1,27 @@
 # Kudan Tutorials - Marker Basics
 
-This tutorial will take you through the basics of getting started with KudanAR, leading on from our previous tutorial which described how to integrate our framework into an iOS project. If you have not already set up a project with an ARCameraViewController, I suggest you check it out before going any further.
+このチュートリアルでは、KudanAR を使い始めるための基本を説明します。以前のチュートリアルでは、フレームワークを iOS プロジェクトに統合する方法について説明しました。プロジェクトに ARCameraViewController を設定していない場合は、先に進む前に以前のチュートリアルをチェックすることをお勧めします。
 
-This tutorial utilises bundled assets so ensure that you have imported the correct assets into your project.
+このチュートリアルでは、バンドルされたアセットを利用するため、正しいアセットがプロジェクトにインポートされていることを確認してください。
 
-For this sample we have used:
+このサンプルでは以下を利用します。
 
 * Marker: spaceMarker.jpg
 * Image: Augmentation: eyebrow.png
 * Video: Augmentation: waves.mp4
 * Alpha video augmentation: kaboom.mp4
-* Model: bloodhoud.armodel / bloodhound.jet 
+* Model: bloodhoud.armodel / bloodhound.jet
 * Model Texture: bloodhound.png
 
-All of which can be downloaded [here](https://jp.xlsoft.com/demo2/kudan/tutorials/assets.zip).
+このプロジェクトにはすべてのアセットが含まれていますが、[こちら](https://jp.xlsoft.com/demo2/kudan/tutorials/assets.zip)からダウンロードすることも可能です。
 
-## Setting Up and Image Trackable
+## Image Trackable の設定
 
-To create an Image Trackable, you are first going to need an image to track. We do not put any restrictions as to what image format you use as long as it is supported natively. For information about what creates a good marker please read our blog post:
+Image Trackable を作成するには、まず追跡する画像が必要になります。iOS ネイティブでサポートされていれば、使用する画像のフォーマットについて制限はありません。良いマーカーとは何か？についての情報は以下のブログ記事を参照してください。
 
-[What Makes a Good Marker? – The Kudan Developer Hub](https://www.xlsoft.com/doc/kudan/what-makes-a-good-marker/)
+[良いマーカーとは? – The Kudan Developer Hub](https://www.xlsoft.com/doc/kudan/ja/what-makes-a-good-marker_jp/)
 
-Notes: Common problems associated with a poor marker are your augmentation appears to twitch or shake.
+Note: 良くないマーカーでは、AR がけいれんまたは揺れているように見える問題が発生します。
 
 ```objectivec
 @property (nonatomic) ARImageTrackable *imageTrackable;
@@ -37,20 +37,20 @@ ARImageTrackerManager *trackerManager = [ARImageTrackerManager getInstance];
 [trackerManager addTrackable:self.imageTrackable];
 ```
 
-## Adding content to an Image Trackable
+## Image Trackable にコンテンツを追加
 
-To add content to an Image Trackable you need to transform the content you have in the corresponding ARNode and add that to the trackable's world (the 3D space surrounding the marker). Kudan has 4 different ARNode subclasses:
+Image Trackable にコンテンツを追加するには、コンテンツを対応する ARNode に変換して Trackable の World（マーカーを囲む 3D 空間）に追加する必要があります。Kudan には 4つの異なる ARNode サブクラスがあります。
 
 * ARImageNode
 * ARVideoNode
 * ARAlphaVideoNode
 * ARModelNode
 
-Note: When adding any AR content to your application you should consider adding it on the background thread. This will help prevent the camera feed from stalling.
+Note: アプリケーションに AR コンテンツを追加するときは、バックグラウンドスレッドに追加することを検討してください。これにより、カメラフィードの失速を防ぐことができます。
 
 ### Image Nodes
 
-Images are displayed using the ARImageNode class. These are initialised with an image. This image can use any format that is supported by the device's operating system.
+画像は ARImageNode クラスを使用して表示されます。ARImageNode は画像を使用して初期化されます。画像には、デバイスの OS でサポートされている任意の形式に対応しています。
 
 ```objectivec
 // Initialise image node
@@ -58,12 +58,11 @@ ARImageNode *imageNode = [[ARImageNode alloc] initWithBundledFile:@"eyebrow.png"
 
 // Add image node to image trackable
 [self.imageTrackable.world addChild:imageNode];
-
 ```
 
 ### Video Nodes
 
-Videos are displayed using ARVideoNode class. Video nodes are initialised using a video file on iOS and a video texture initialised from a video file for Android. The video file can be any format supported by the native device.
+ビデオは ARVideoNode クラスを使用して表示されます。ARVideoNode は、iOS 上のビデオファイルと Android 用のビデオファイルから初期化されたビデオテクスチャを使用して初期化されます。 ビデオファイルは、デバイスの OS でサポートされている任意の形式に対応しています。
 
 ```objectivec
 // Initialise video node
@@ -75,7 +74,7 @@ ARVideoNode *videoNode = [[ARVideoNode alloc] initWithBundledFile:@"waves.mp4"];
 
 ### Alpha Video Nodes
 
-Alpha videos are videos with a transparency channel and can be created through our Toolkit using a set of transparent PNGs. Alpha videos are displayed using the ARAlphaVideo class. They are initialised the same as a video node.
+アルファビデオは透明なチャンネルを持つビデオであり、[AR ツールキット](https://www.xlsoft.com/jp/products/kudan/download.html)を使用して透明な PNG とのセットを使って作成することができます。アルファビデオは ARAlphaVideoNode クラスを使用して表示されます。ARAlphaVideoNode はビデオノードと同じように初期化されます。
 
 
 ```objectivec
@@ -88,15 +87,15 @@ ARAlphaVideoNode *alphaVideoNode = [[ARAlphaVideoNode alloc] initWithBundledFile
 
 ### Model Nodes
 
-Models are displayed using the ARModelNode class. They are created in a two steps. First the model is imported using the ARModelImporter class. A texture material is then applied to the model's individual mesh nodes. This can be either a colour material, texture material or a light material.
+モデルは ARModelNode クラスを使用して表示されます。ARModelNode は 2つのステップで作成されます。まずモデルは ARModelImporter クラスを使用してインポートされます。次に、テクスチャーのマテリアルがモデルの個々のメッシュノードに適用されます。マテリアルは、カラーマテリアル、テクスチャーマテリアル、またはライトマテリアルのいずれかです。
 
-Note: For iOS if you have correctly mapped your texture to your model you only need to set the lighting values of each mesh node as your texture should be applied during the importing of the model. 
+Note: iOS の場合、テクスチャをモデルに正しくマッピングしていれば、モデルのインポート中にテクスチャが適用されるため、各メッシュノードのライティング値を設定するだけで済みます。
 
-For more information on using 3D models with Kudan please check out our Wiki entry:
+KudanAR で 3Dモデルを使用する際の詳細は、以下のページをチェックしてください。
 
 [3D Models](https://www.xlsoft.com/doc/kudan/3d-models/)
 
-Note: If you do not add lighting to your ARLightMaterial your material will show up as black.
+Note: ARLightMaterial に照明を追加しないと、マテリアルは黒く表示されます。
 
 ```objectivec
 // Import model
@@ -115,9 +114,9 @@ for(ARMeshNode *meshNode in modelNode.meshNodes){
 
 ### Scaling
 
-If the image/video/model you wish to add to the marker isn't the same size as the marker, you may wish to scale your ARNode. Providing your video/image is the same aspect ratio as your trackable you can divide one width/height from the other to get the correct scale. This value can then be used to scale your nodes.
+マーカーに追加する画像／ビデオ／モデルがマーカーと同じサイズでない場合、ARNode をスケーリングすることができます。ビデオ／画像の提供は trackable と同じアスペクト比であるため、正しいスケールを取得するために幅／高さを分割できます。この値を使用して、ノードをスケーリングできます。
 
-Note: This tutorial scales using a uniform value, although you are able to scale your x,y and z axis separately.
+注：このチュートリアルでは、x、y、z 軸を個別にスケーリングできますが、均一な値を使用してスケーリングします。
 
 ```objectivec
 // Image scale
@@ -133,9 +132,10 @@ float scale = (float)self.imageTrackable.width / alphaVideoNode.videoTexture.wid
 [alphaVideoNode scaleByUniform:scale];
 ```
 
-### Content visibility
+### コンテンツの可視性
 
 Each node has a boolean value which can be set to determine whether or not the node is displayed. This is useful when you have multiple nodes attached to a marker and you do not wish to display them all at once. This can be set using:
+各ノードにはブール値があり、ノードを表示するかどうかを決定するために設定できます。この設定はマーカーに複数のノードが接続されていて、それらを一度にすべて表示したくない場合に便利です。次を使用して設定できます。
 
 ```objectivec
 // Hide image node
