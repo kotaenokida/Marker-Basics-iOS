@@ -8,12 +8,12 @@ This tutorial utilises bundled assets so ensure that you have imported the corre
 
 For this sample we have used:
 
-* Marker: spaceMarker.jpg
-* Image: Augmentation: eyebrow.png
-* Video: Augmentation: waves.mp4
-* Alpha video augmentation: kaboom.mp4
-* Model: bloodhoud.armodel / bloodhound.jet 
-* Model Texture: bloodhound.png
+- Marker: spaceMarker.jpg
+- Image: Augmentation: eyebrow.png
+- Video: Augmentation: waves.mp4
+- Alpha video augmentation: kaboom.mp4
+- Model: bloodhoud.armodel / bloodhound.jet
+- Model Texture: bloodhound.png
 
 All of which can be downloaded [here](https://jp.xlsoft.com/demo2/kudan/tutorials/assets.zip).
 
@@ -79,7 +79,6 @@ ARVideoNode *videoNode = [[ARVideoNode alloc] initWithBundledFile:@"waves.mp4"];
 
 Alpha videos are videos with a transparency channel and can be created through our Toolkit using a set of transparent PNGs. Alpha videos are displayed using the ARAlphaVideo class. They are initialised the same as a video node.
 
-
 ```objectivec
 // Initialise alpha video node
 ARAlphaVideoNode *alphaVideoNode = [[ARAlphaVideoNode alloc] initWithBundledFile:@"kaboom.mp4"];
@@ -92,7 +91,7 @@ ARAlphaVideoNode *alphaVideoNode = [[ARAlphaVideoNode alloc] initWithBundledFile
 
 Models are displayed using the ARModelNode class. They are created in a two steps. First the model is imported using the ARModelImporter class. A texture material is then applied to the model's individual mesh nodes. This can be either a colour material, texture material or a light material.
 
-Note: For iOS if you have correctly mapped your texture to your model you only need to set the lighting values of each mesh node as your texture should be applied during the importing of the model. 
+Note: For iOS if you have correctly mapped your texture to your model you only need to set the lighting values of each mesh node as your texture should be applied during the importing of the model.
 
 For more information on using 3D models with Kudan please check out our Wiki entry:
 
@@ -143,3 +142,12 @@ Each node has a boolean value which can be set to determine whether or not the n
 // Hide image node
 [imageNode setVisible:NO];
 ```
+
+## Instructions
+
+- Download the Kudan AR iOS SDK here: [https://www.xlsoft.com/en/products/kudan/download.html](https://www.xlsoft.com/en/products/kudan/download.html?utm_source=external&utm_medium=github&utm_campaign=xlsoft_Public-Samples-iOS)
+- Drop the `KudanAR.framework` into your project
+- Disable Bitcode, go to the Build Settings tab of your workspace, scroll down to Build Options, and set Enable Bitcode to No.
+- Run the XCode project
+
+If you have any feedback about our SDK or provided sample source code, please get in touch with us at [our support site](https://www.xlsoft.com/doc/kudan/getting-started/?utm_source=external&utm_medium=github&utm_campaign=xlsoft_Public-Samples-iOS).
