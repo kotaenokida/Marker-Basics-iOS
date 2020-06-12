@@ -8,12 +8,12 @@
 
 このサンプルでは以下を利用します。
 
-* Marker: spaceMarker.jpg
-* Image: Augmentation: eyebrow.png
-* Video: Augmentation: waves.mp4
-* Alpha video augmentation: kaboom.mp4
-* Model: bloodhoud.armodel / bloodhound.jet
-* Model Texture: bloodhound.png
+- Marker: spaceMarker.jpg
+- Image: Augmentation: eyebrow.png
+- Video: Augmentation: waves.mp4
+- Alpha video augmentation: kaboom.mp4
+- Model: bloodhoud.armodel / bloodhound.jet
+- Model Texture: bloodhound.png
 
 このプロジェクトにはすべてのアセットが含まれていますが、[こちら](https://jp.xlsoft.com/demo2/kudan/tutorials/assets.zip)からダウンロードすることも可能です。
 
@@ -43,10 +43,10 @@ ARImageTrackerManager *trackerManager = [ARImageTrackerManager getInstance];
 
 Image Trackable にコンテンツを追加するには、コンテンツを対応する ARNode に変換して Trackable の World（マーカーを囲む 3D 空間）に追加する必要があります。Kudan には 4つの異なる ARNode サブクラスがあります。
 
-* ARImageNode
-* ARVideoNode
-* ARAlphaVideoNode
-* ARModelNode
+- ARImageNode
+- ARVideoNode
+- ARAlphaVideoNode
+- ARModelNode
 
 Note: アプリケーションに AR コンテンツを追加するときは、バックグラウンドスレッドに追加することを検討してください。これにより、カメラフィードの失速を防ぐことができます。
 
@@ -77,7 +77,6 @@ ARVideoNode *videoNode = [[ARVideoNode alloc] initWithBundledFile:@"waves.mp4"];
 ### Alpha Video Nodes
 
 アルファビデオは透明なチャンネルを持つビデオであり、[AR ツールキット](https://www.xlsoft.com/jp/products/kudan/download.html)を使用して透明な PNG とのセットを使って作成することができます。アルファビデオは ARAlphaVideoNode クラスを使用して表示されます。ARAlphaVideoNode はビデオノードと同じように初期化されます。
-
 
 ```objectivec
 // Initialise alpha video node
@@ -143,14 +142,14 @@ float scale = (float)self.imageTrackable.width / alphaVideoNode.videoTexture.wid
 [imageNode setVisible:NO];
 ```
 
-
-## 利用方法
+### 利用方法
 
 - [エクセルソフトの Kudan ダウンロードページ](https://www.xlsoft.com/jp/products/kudan/download.html?utm_source=external&utm_medium=github&utm_campaign=xlsoft_Marker-Basics-iOS) から最新の Kudan AR iOS SDK のダウンロードをお申し込みください。
 - `KudanAR.framework` をプロジェクトフォルダーにコピーまたは移動します。
+- [Build Settings (ビルド設定)] タブで [Build Options (ビルド オプション)] にスクロールして、[Enable Bitcode (ビットコードを有効にする)] を [No (いいえ)] に設定します。
 - ビルドして実行します。
 
-## エクセルソフトについて
+### エクセルソフトについて
 
 エクセルソフトは Kudan AR/CV SDK の販売代理店です。
 
