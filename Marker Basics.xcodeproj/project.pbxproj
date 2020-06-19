@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E84EDDA2230EDA900D87D15 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E84EDD92230EDA900D87D15 /* libc++.tbd */; };
-		3EE315572230F03F008BFF2C /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE315562230F03F008BFF2C /* KudanAR.framework */; };
+		C3C5A345249C37AE00BE4608 /* KudanAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C5A344249C37AE00BE4608 /* KudanAR.framework */; };
 		E2D478921E23BAEC00439ECF /* lego.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E2D478911E23BAEC00439ECF /* lego.jpg */; };
 		E2FDDAA91CCE319D00AB37D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FDDAA81CCE319D00AB37D2 /* main.m */; };
 		E2FDDAAC1CCE319D00AB37D2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2FDDAAB1CCE319D00AB37D2 /* AppDelegate.m */; };
@@ -26,7 +26,7 @@
 
 /* Begin PBXFileReference section */
 		3E84EDD92230EDA900D87D15 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
-		3EE315562230F03F008BFF2C /* KudanAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KudanAR.framework; sourceTree = "<group>"; };
+		C3C5A344249C37AE00BE4608 /* KudanAR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KudanAR.framework; sourceTree = "<group>"; };
 		E2D478911E23BAEC00439ECF /* lego.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = lego.jpg; path = Assets/lego.jpg; sourceTree = "<group>"; };
 		E2FDDAA41CCE319D00AB37D2 /* Marker Basics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marker Basics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2FDDAA81CCE319D00AB37D2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E84EDDA2230EDA900D87D15 /* libc++.tbd in Frameworks */,
-				3EE315572230F03F008BFF2C /* KudanAR.framework in Frameworks */,
+				C3C5A345249C37AE00BE4608 /* KudanAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 		E2FDDAA61CCE319D00AB37D2 /* Kudan Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				3EE315562230F03F008BFF2C /* KudanAR.framework */,
+				C3C5A344249C37AE00BE4608 /* KudanAR.framework */,
 				E2FDDAE11CCE590C00AB37D2 /* Assets */,
 				E2FDDAAA1CCE319D00AB37D2 /* AppDelegate.h */,
 				E2FDDAAB1CCE319D00AB37D2 /* AppDelegate.m */,
@@ -158,7 +158,7 @@
 				TargetAttributes = {
 					E2FDDAA31CCE319D00AB37D2 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 8KP4HEKJWM;
+						DevelopmentTeam = 67S42YF6M9;
 					};
 				};
 			};
@@ -311,11 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8KP4HEKJWM;
+				DEVELOPMENT_TEAM = 67S42YF6M9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/kudansamples",
+					"$(PROJECT_DIR)/Marker\\ Basics",
 					"$(PROJECT_DIR)/Marker\\ Basics",
 				);
 				INFOPLIST_FILE = "Marker Basics/Info.plist";
@@ -330,11 +331,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8KP4HEKJWM;
+				DEVELOPMENT_TEAM = 67S42YF6M9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/kudansamples",
+					"$(PROJECT_DIR)/Marker\\ Basics",
 					"$(PROJECT_DIR)/Marker\\ Basics",
 				);
 				INFOPLIST_FILE = "Marker Basics/Info.plist";

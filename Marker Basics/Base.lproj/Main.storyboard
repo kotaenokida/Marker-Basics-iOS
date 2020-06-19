@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jzt-Ez-A1I">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jzt-Ez-A1I">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,35 +16,21 @@
                         <viewControllerLayoutGuide type="bottom" id="wTK-oI-Pp8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eaT-CO-5Sf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7Z-6v-NrD">
-                                <rect key="frame" x="16" y="728" width="78.333333333333329" height="30"/>
-                                <state key="normal" title="View Image"/>
-                                <connections>
-                                    <action selector="addImageButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="uko-gk-U81"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmM-5A-R0b">
-                                <rect key="frame" x="192.66666666666666" y="728" width="77.999999999999972" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OmM-5A-R0b">
+                                <rect key="frame" x="42" y="686" width="120" height="30"/>
                                 <state key="normal" title="View Alpha Video"/>
                                 <connections>
                                     <action selector="addAlphaVideoButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="fkB-KV-aJE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldi-Eh-93w">
-                                <rect key="frame" x="104.33333333333334" y="728" width="78.333333333333343" height="30"/>
-                                <state key="normal" title="View Video"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlB-x3-sF2">
+                                <rect key="frame" x="221" y="686" width="120" height="30"/>
+                                <state key="normal" title="Switch Camera"/>
                                 <connections>
-                                    <action selector="addVideoButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="e8v-1M-nv9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlB-x3-sF2">
-                                <rect key="frame" x="280.66666666666669" y="728" width="78.333333333333314" height="30"/>
-                                <state key="normal" title="View Model"/>
-                                <connections>
-                                    <action selector="addModelButtonPressed:" destination="RNL-xw-Afc" eventType="touchUpInside" id="k72-bC-3AD"/>
+                                    <action selector="switchCamera:" destination="RNL-xw-Afc" eventType="touchUpInside" id="CBX-F1-2On"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,16 +38,9 @@
                         <constraints>
                             <constraint firstItem="wTK-oI-Pp8" firstAttribute="top" secondItem="OmM-5A-R0b" secondAttribute="bottom" constant="20" id="3Ak-Ht-XKh"/>
                             <constraint firstItem="XlB-x3-sF2" firstAttribute="trailing" secondItem="eaT-CO-5Sf" secondAttribute="trailingMargin" id="BvY-c9-SyW"/>
-                            <constraint firstItem="ldi-Eh-93w" firstAttribute="leading" secondItem="A7Z-6v-NrD" secondAttribute="trailing" constant="10" id="DVo-Zc-v4u"/>
                             <constraint firstItem="OmM-5A-R0b" firstAttribute="width" secondItem="XlB-x3-sF2" secondAttribute="width" id="IhO-Tc-XAC"/>
-                            <constraint firstItem="OmM-5A-R0b" firstAttribute="leading" secondItem="ldi-Eh-93w" secondAttribute="trailing" constant="10" id="LDK-nd-79s"/>
-                            <constraint firstItem="wTK-oI-Pp8" firstAttribute="top" secondItem="ldi-Eh-93w" secondAttribute="bottom" constant="20" id="WXa-re-Wgd"/>
-                            <constraint firstItem="A7Z-6v-NrD" firstAttribute="leading" secondItem="eaT-CO-5Sf" secondAttribute="leadingMargin" id="dCl-fU-jTH"/>
                             <constraint firstItem="wTK-oI-Pp8" firstAttribute="top" secondItem="XlB-x3-sF2" secondAttribute="bottom" constant="20" id="meb-d8-Dd1"/>
-                            <constraint firstItem="ldi-Eh-93w" firstAttribute="width" secondItem="OmM-5A-R0b" secondAttribute="width" id="pFJ-oD-KdH"/>
                             <constraint firstItem="XlB-x3-sF2" firstAttribute="leading" secondItem="OmM-5A-R0b" secondAttribute="trailing" constant="10" id="pNW-uM-i8p"/>
-                            <constraint firstItem="A7Z-6v-NrD" firstAttribute="width" secondItem="ldi-Eh-93w" secondAttribute="width" id="tHt-lw-i4z"/>
-                            <constraint firstItem="wTK-oI-Pp8" firstAttribute="top" secondItem="A7Z-6v-NrD" secondAttribute="bottom" constant="20" id="zan-tj-zga"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -139,6 +116,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="kudan_logo" width="61.439998626708984" height="12.720000267028809"/>
+        <image name="kudan_logo" width="256" height="53"/>
     </resources>
 </document>

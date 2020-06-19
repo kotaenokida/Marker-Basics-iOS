@@ -98,10 +98,13 @@
 }
 
 
-- (IBAction)addModelButtonPressed:(id)sender
+- (IBAction)switchCamera:(id)sender
 {
-    [self hideAll];
-    [[self.imageTrackable.world.children objectAtIndex:3] setVisible:YES];
+    ARCameraStream *currentCamera = [ARCameraStream getInstance];
+    
+    [currentCamera switchCameraTapped];
+//    [self hideAll];
+//    [[self.imageTrackable.world.children objectAtIndex:3] setVisible:YES];
 }
 
 - (IBAction)addAlphaVideoButtonPressed:(id)sender
